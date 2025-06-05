@@ -1,7 +1,7 @@
 # Contact Book App
 
 A simple contact management web application built with Flask.  
-It supports user registration, login/logout, and CRUD operations for contacts.
+It supports user registration, login/logout, and CRUD operations for contacts. 
 
 ---
 
