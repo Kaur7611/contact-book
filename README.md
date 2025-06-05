@@ -12,7 +12,7 @@ It supports user registration, login/logout, and CRUD operations for contacts.
 - User authentication to protect routes and user data  
 - SQLite database backend via SQLAlchemy ORM  
 - Flash messages for user feedback  
-- Basic Bootstrap-based UI (you can add your own styling)
+- Basic Bootstrap-based UI 
 
 ---
 
