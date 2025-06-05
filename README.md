@@ -46,5 +46,10 @@ It supports user registration, login/logout, and CRUD operations for contacts.
 
 ### Login Page
 
-![Login Page](screenshots/edit-contact.png)
+![Login Page](screenshots/login.png)
+
+### Edit Contact
+
+![Edit Contact](screenshots/edit-contact.png)
+
 
