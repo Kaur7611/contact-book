@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form method="post">
+  <input type="text" name="name" placeholder="Name" value="{{ contact.name }}" required />
+  <input type="tel" name="phone" placeholder="Phone Number" value="{{ contact.phone }}" required />
+  <button type="submit" class="edit-btn">Update Contact</button>
+</form>
+<a href="{{ url_for('index') }}">Back to contacts</a>
+{% endblock %}
