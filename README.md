@@ -33,3 +33,18 @@ It supports user registration, login/logout, and CRUD operations for contacts.
    ```bash
    git clone https://github.com/Kaur7611/contact-book.git
    cd contact-book
+
+## Screenshots
+
+### Homepage
+
+![Homepage](screenshots/home.png)
+
+### Add Contact
+
+![Add Contact](screenshots/add-contact.png)
+
+### Login Page
+
+![Login Page](screenshots/edit-contact.png)
+
