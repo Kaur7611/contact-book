@@ -42,5 +42,5 @@ A simple contact book web application built with Flask and Python that allows us
 ![Add Contact] (screenshots/add-contact.png)
 
 ###  Edit or Delete Contact  
-![Edit or Delete Contact](screenshots/edit-or-delete-contact.png)
+![Edit or Delete Contact](screenshots/edit_or_delete.png)
 
