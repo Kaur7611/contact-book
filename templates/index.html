@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Your Contacts</h2>
+<a class="btn btn-success mb-3" href="{{ url_for('add') }}">Add Contact</a>
+<a class="btn btn-secondary mb-3 float-end" href="{{ url_for('logout') }}">Logout</a>
+<table class="table table-striped">
+    <tr><th>Name</th><th>Phone</th><th>Email</th><th>Actions</th></tr>
+    {% for contact in contacts %}
+    <tr>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.phone }}</td>
+        <td>{{ contact.email }}</td>
+        <td>
+            <a href="{{ url_for('edit', id=contact.id) }}" class="btn btn-sm btn-warning">Edit</a>
+            <a href="{{ url_for('delete', id=contact.id) }}" class="btn btn-sm btn-danger">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
