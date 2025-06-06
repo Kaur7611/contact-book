@@ -29,3 +29,18 @@ A simple contact book web application built with Flask and Python that allows us
    ```bash
    git clone https://github.com/Kaur7611/contact-book.git
    cd contact-book
+
+## **Screenshots**
+
+### Login Page  
+![Login Page](screenshots/login.png)
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+###  Add Contact   
+![Add Contact] (screenshots/add-contact.png)
+
+###  Edit or Delete Contact  
+![Edit or Delete Contact](screenshots/edit-or-delete-contact.png)
+
