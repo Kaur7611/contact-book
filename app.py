@@ -49,7 +49,7 @@ def login():
             return redirect(url_for('index'))
         flash('Invalid credentials.', 'danger')
     return render_template('login.html', form=form)
-
+   
 @app.route('/logout')
 @login_required
 def logout():

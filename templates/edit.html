@@ -1,11 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Edit Contact</h2>
-<form method="POST">
+<div class="form-container">
+  <h2>Edit Contact</h2>
+  <form method="POST">
     {{ form.hidden_tag() }}
-    {{ form.name.label }} {{ form.name(class="form-control") }}<br>
-    {{ form.phone.label }} {{ form.phone(class="form-control") }}<br>
-    {{ form.email.label }} {{ form.email(class="form-control") }}<br>
-    {{ form.submit(class="btn btn-primary") }}
-</form>
+
+    <label>{{ form.name.label }}</label>
+    {{ form.name(class="form-input") }}
+
+    <label>{{ form.phone.label }}</label>
+    {{ form.phone(class="form-input") }}
+
+    <label>{{ form.email.label }}</label>
+    {{ form.email(class="form-input") }}
+
+    {{ form.submit(class="btn btn-submit") }}
+  </form>
+</div>
 {% endblock %}
+

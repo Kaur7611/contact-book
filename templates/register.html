@@ -1,12 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Register</h2>
-<form method="POST">
+
+<div class="register-container">
+  <h2>Register</h2>
+  <form method="POST">
     {{ form.hidden_tag() }}
-    {{ form.username.label }} {{ form.username(class="form-control") }}<br>
-    {{ form.password.label }} {{ form.password(class="form-control") }}<br>
-    {{ form.confirm_password.label }} {{ form.confirm_password(class="form-control") }}<br>
-    {{ form.submit(class="btn btn-primary") }}
-</form>
-<a href="{{ url_for('login') }}">Already have an account? Login</a>
+
+    <div>
+      {{ form.username.label }}
+      {{ form.username(class="form-input") }}
+    </div>
+
+    <div class="password-wrapper">
+      {{ form.password.label }}
+      {{ form.password(class="password-input") }}
+      <span class="toggle-password">
+        <i class="fas fa-eye"></i>
+        <i class="fas fa-eye-slash"></i>
+      </span>
+    </div>
+
+    <div>
+      {{ form.confirm_password.label }}
+      {{ form.confirm_password(class="form-input") }}
+    </div>
+
+    {{ form.submit(class="button") }}
+  </form>
+  <a href="{{ url_for('login') }}">Already have an account? Login</a>
+</div>
+
+<script>
+  document.querySelectorAll(".toggle-password").forEach(function (eye) {
+    eye.addEventListener("click", function () {
+      const input = eye.previousElementSibling;
+      if (input.type === "password") {
+        input.type = "text";
+        eye.classList.add("show");
+      } else {
+        input.type = "password";
+        eye.classList.remove("show");
+      }
+    });
+  });
+</script>
+
 {% endblock %}
