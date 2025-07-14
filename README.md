@@ -42,4 +42,4 @@ A simple contact book web application built with Flask and Python that allows us
 ![Add Contact](screenshots/add-contact.png)
 
 ### Edit Contact  
-![Edit Contact](screenshots/edit.png)
+![Edit Contact](screenshots/edit-contact.png)
