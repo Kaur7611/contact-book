@@ -1,6 +1,6 @@
 # Flask Contact Book App
 
-A simple contact book web application built with Flask and Python that allows users to register, log in, and manage their personal contacts. The app supports full CRUD (Create, Read, Update, Delete) operations for contacts and user authentication.
+A contact book web application built with Flask and Python that allows users to register, log in, and manage their personal contacts. The app supports full CRUD (Create, Read, Update, Delete) operations for contacts and user authentication.
 
 ## Features
 
@@ -35,8 +35,8 @@ A simple contact book web application built with Flask and Python that allows us
 ### Login Page  
 ![Login Page](screenshots/login.png)
 
-### Home Page  
-![Home Page](screenshots/home.png)
+### Contacts Page  
+![Home Page](screenshots/contacts_page.png)
 
 ### Add Contact  
 ![Add Contact](screenshots/add-contact.png)
