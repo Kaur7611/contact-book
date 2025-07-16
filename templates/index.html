@@ -1,41 +1,52 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+  <div class="contacts-wrapper">
+    <div class="contacts-header">
+      <h2>Your Contacts</h2>
+      <div class="actions">
+        <a class="btn btn-add" href="{{ url_for('add') }}">Add Contact</a>
+        <a class="btn btn-logout" href="{{ url_for('logout') }}">Logout</a>
+      </div>
+    </div>
 
-{% block content %}
-<div class="contacts-container">
-  <h2>Your Contacts</h2>
-
-  <div class="actions">
-    <a class="btn btn-add" href="{{ url_for('add') }}">Add Contact</a>
-    <a class="btn btn-logout" href="{{ url_for('logout') }}">Logout</a>
-  </div>
-
-  {% if contacts %}
-  <div class="table-wrapper">
-    <table>
+    {% if contacts %}
+    <div class="table-wrapper">
+      <table>
         <thead>
-            <tr>
+          <tr>
             <th>Name</th>
             <th>Phone</th>
             <th>Email</th>
             <th>Actions</th>
-            </tr>
-      <tbody>
-        {% for contact in contacts %}
-        <tr>
-          <td data-label="Name">{{ contact.name }}</td>
-          <td data-label="Phone">{{ contact.phone }}</td>
-          <td data-label="Email">{{ contact.email }}</td>
-          <td data-label="Actions" class="actions-cell">
-            <a href="{{ url_for('edit', id=contact.id) }}" class="btn btn-edit">Edit</a>
-            <a href="{{ url_for('delete', id=contact.id) }}" class="btn btn-delete">Delete</a>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+          </tr>
+        </thead>
+        <tbody>
+          {% for contact in contacts %}
+          <tr>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.phone }}</td>
+            <td>{{ contact.email }}</td>
+            <td class="actions-cell">
+              <a
+                href="{{ url_for('edit', id=contact.id) }}"
+                class="btn btn-edit"
+                >Edit</a
+              >
+              <a
+                href="{{ url_for('delete', id=contact.id) }}"
+                class="btn btn-delete"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <p class="no-contacts">
+      No contacts found. Click "Add Contact" to create one.
+    </p>
+    {% endif %}
   </div>
-  {% else %}
-  <p>No contacts found. Click "Add Contact" to create one.</p>
-  {% endif %}
-</div>
+
 {% endblock %}

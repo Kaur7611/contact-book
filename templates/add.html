@@ -1,20 +1,20 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="form-container">
-  <h2>Add Contact</h2>
-  <form method="POST">
-    {{ form.hidden_tag() }}
+{% extends "base.html" %} {% block content %}
+<div class="main-content">
+  <div class="form-container">
+    <h2>Add Contact</h2>
+    <form method="POST">
+      {{ form.hidden_tag() }}
 
-    <label>{{ form.name.label }}</label>
-    {{ form.name(class="form-input") }}
+      <label>{{ form.name.label }}</label>
+      {{ form.name(class="form-input") }}
 
-    <label>{{ form.phone.label }}</label>
-    {{ form.phone(class="form-input") }}
+      <label>{{ form.phone.label }}</label>
+      {{ form.phone(class="form-input") }}
 
-    <label>{{ form.email.label }}</label>
-    {{ form.email(class="form-input") }}
-
-    {{ form.submit(class="btn btn-submit") }}
-  </form>
+      <label>{{ form.email.label }}</label>
+      {{ form.email(class="form-input") }} {{ form.submit(class="btn
+      btn-submit") }}
+    </form>
+  </div>
 </div>
 {% endblock %}

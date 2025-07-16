@@ -1,37 +1,38 @@
+<!-- ✅ Clean base.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
-    <script
-      src="https://kit.fontawesome.com/your_kit_code.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="container mt-4">
-      {% with messages = get_flashed_messages(with_categories=true) %} {% if
-      messages %} {% for category, message in messages %}
-      <div class="flash {{ category }}">{{ message }}</div>
-      {% endfor %} {% endif %} {% endwith %}
-      <div class="main-content">{% block content %}{% endblock %}</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+   
+      {% block content %}{% endblock %}
     </div>
-    <script>
-      setTimeout(function () {
-        const flashes = document.querySelectorAll(".flash");
-        flashes.forEach(function (flash) {
-          flash.style.transition = "opacity 0.5s ease";
-          flash.style.opacity = "0";
-          setTimeout(() => flash.remove(), 500);
-        });
-      }, 3000);
-    </script>
-  </body>
+  </div>
+  
+
+  <script>
+    setTimeout(function () {
+      const flashes = document.querySelectorAll(".flash");
+      flashes.forEach(function (flash) {
+        flash.style.transition = "opacity 0.5s ease";
+        flash.style.opacity = "0";
+        setTimeout(() => flash.remove(), 500);
+      });
+    }, 3000);
+  </script>
+</body>
 </html>
+
