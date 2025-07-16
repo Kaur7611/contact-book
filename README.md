@@ -36,7 +36,7 @@ A contact book web application built with Flask and Python that allows users to 
 ![Login Page](screenshots/login.png)
 
 ### Contacts Page  
-![Home Page](screenshots/contacts_page.png)
+![Contacts Page](screenshots/contacts_page.png)
 
 ### Add Contact  
 ![Add Contact](screenshots/add-contact.png)
